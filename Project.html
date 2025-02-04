@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homeland</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #333;
+        }
+
+        .brandname {
+            padding: 3px;
+            background: #72c178;
+            margin: 0px;
+        }
+        .brandname img{
+            width: 100%;
+            margin: 0%;
+            height: 230px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #4a4848;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 5px;
+            justify-content: center;
+        }
+
+        .header p {
+            font-size: 14px;
+        }
+
+        .features {
+            text-align: center;
+            padding: 30px;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .feature-card {
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+        }
+
+        .feature-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+        }
+
+        #abc {
+            height: 50px;
+        }
+
+        .container-fluid {
+            padding: 10px;
+        }
+
+        .header2 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .header2 h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-gallery img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .features2 {
+            display: flex;
+            padding: 30px 20px;
+            text-align: center;
+            gap: 30px;
+            width: 80%;
+            background-color: #cde8cf;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+
+        }
+
+        .feature-card2 {
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+        }
+
+        .feature-card2 h4 {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .header3 {
+            text-align: center;
+            padding: 7px;
+            width: 80%;
+            margin: 20px auto;
+
+        }
+
+        .header3 h2 {
+            font-size: 35px;
+            font-weight: bold;
+            padding: 5px;
+            color: #4CAF50;
+        }
+
+        .perfect-accommodation {
+            background-color: #fff;
+            padding: 20px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 70%;
+
+
+        }
+
+        .perfect-accommodation h2 {
+            color: #4CAF50;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .accommodation-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .accommodation-gallery img {
+            width: 25%;
+            height: 250px;
+            border-radius: 13px;
+            transition: transform 0.4s ease, filter 0.4s ease;
+
+        }
+
+        .accommodation-gallery img:hover {
+            transform: scale(1.1);
+
+        }
+
+        .clients-section {
+            background: #cde8cf;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 70%;
+
+        }
+
+        .client-card {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .client-card p {
+            font-size: 20px;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .reviews{
+            display: flex;
+        }
+        .image-gallery2 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+        }
+
+        .image-gallery2 img {
+            width: 90px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-gallery2 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .career-card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .career-card h3 {
+            color: #4CAF50;
+        }
+
+        .career-card p {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .apply-button:hover {
+            background: #388E3C;
+        }
+
+        .review-card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+        .header4{
+            padding: 10px;
+        }
+        .header4 h2{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .review-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-style: italic;
+        }
+        .contact-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .contact-form img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .form-container {
+            padding: 20px;
+            max-width: 400px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-container button:hover {
+            background: #388E3C;
+        }
+
+        .footerdata {
+            background-color:  #e8f5e9;
+            color: gold;
+        }
+        a,p{
+            color: rgb(0, 0, 0);
+        }
+
+        .depart{
+            background: linear-gradient(to right,rgba(241, 73, 44, 0.94),rgba(255, 119, 0, 0.86));
+            color: white;
+            font-size: 15px;
+            width: 400px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .depart:hover{
+            transition: 0.4s;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="jumbotron brandname">
+        <img src="pics/headbanner.jpeg">
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#property">Property</a>
+        <a href="#clients">Our Clients</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!--code For slider effect-->
+
+    <section>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="pics/slider1.jpg" width="100%" height="300px">
+                </div>
+                <div class="item">
+                    <img src="pics/slider2.jpg" width="100%" height="300px">
+                </div>
+                <div class="item">
+                    <img src="pics/slider3.jpg" width="100%" height="300px">
+                </div>
+                <div class="item">
+                    <img src="pics/slider4.jpg" width="100%" height="300px">
+                </div>
+                <div class="item">
+                    <img src="pics/slider5.jpg" width="100%" height="300px">
+                </div>
+            </div>
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+        </div>
+    </section> <!--END of Slider-->
+
+    <section>
+        <div class="header">
+            <h1><strong>Find Your Sweet Accommodation</strong></h1>
+            <p>Enjoy your precious youth and let us worry about your lodging.</p>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <img id="abc" src="pics/blueprint.png">
+                <h3>Floor Plan & Room Details</h3>
+                <p>Get to know room number, orientation, floor plans ans roommates</p>
+            </div>
+            <div class="feature-card">
+                <img id="abc" src="pics/verification.png">
+                <h3>!00% Verified Properties</h3>
+                <p>What you see is what you get. It's our promise</p>
+            </div>
+            <div class="feature-card">
+                <img id="abc" src="pics/match.png">
+                <h3>Price-Match Guarantee</h3>
+                <p>Find a lower price and we'll match it</p>
+            </div>
+            <div class="feature-card">
+                <img id="abc" src="pics/tech.png">
+                <h3>1-on-1 Professional Support</h3>
+                <p>Just once call away, we'll be there for you around the clock</p>
+            </div>
+        </div> <!--end of Features-->
+    </section>
+
+    <div class="container-fluid">
+        <div class="header2">
+            <h1>Book Your Perfect Accommodation</h1>
+            <p>Eliminate the inconvenience of arranging your student housing during these prime years.</p>
+        </div>
+
+        <div class="image-gallery">
+            <img src="pics/pexels-kelly-1179532-12496265.jpg" width="100%" height="250px" alt="Chicago">
+            <img src="pics/pexels-david-gracia-242488507-12332819.jpg" width="100%" height="250px" alt="Moscow">
+            <img src="pics/pexels-gije-16807910.jpg" width="100%" height="250px" alt="Georgia">
+            <img src="pics/pexels-leefinvrede-22204003.jpg" width="100%" height="250px" alt="Switzerland">
+            <img src="pics/pexels-kelly-1179532-12496265.jpg" width="100%" height="250px" alt="New York">
+            <img src="pics/pexels-leefinvrede-22204003.jpg" width="100%" height="250px" alt="Switzerland">
+            <img src="pics/pexels-leonardo-luncasu-1230168729-23220830.jpg" width="100%" height="250px" alt="Indonesia">
+            <img src="pics/pexels-mark-flying-551780646-16873667.jpg" width="100%" height="250px" alt="New Zealand">
+            <img src="pics/pexels-kelly-1179532-12496265.jpg" width="100%" height="250px" alt="Chicago">
+            <img src="pics/pexels-gije-16807910.jpg" width="100%" height="250px" alt="Georgia">
+            <img src="pics/pexels-kelly-1179532-12496265.jpg" width="100%" height="250px" alt="New York">
+        </div>
+
+    </div>
+
+    <div>
+        <div class="header3">
+            <h2>Get In Touch</h2>
+            <p>If you have any questions please feel free to contact us.</p>
+        </div>
+
+        <div class="features2">
+            <div class="feature-card2">
+                <img id="abc" src="pics/phone.png">
+                <h4>Call us</h4>
+            </div>
+            <div class="feature-card2">
+                <img id="abc" src="pics/email.png">
+                <h4>Email us</h4>
+            </div>
+            <div class="feature-card2">
+                <img id="abc" src="pics/whatsapp.png">
+                <h4>Chat on Whatsapp</h4>
+            </div>
+            <div class="feature-card2">
+                <img id="abc" src="pics/application.png">
+                <h4>Chat on Website</h4>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="perfect-accommodation">
+        <h2>Perfect Accommodation</h2>
+        <p style="text-align: center;">Accommodation facility for working professional men, women, and college students.
+        </p>
+        <div class="accommodation-gallery">
+            <img src="pics/professional men.jpg" alt="Professional Men">
+            <img src="pics/professional woman" alt="Professional Women">
+            <img src="pics/college girl" alt="College Student">
+        </div>
+    </section>
+
+    <section class="clients-section" id="clients">
+        <h2 style="text-align: center; font-weight: bold;">Our Clients</h2>
+        <div class="reviews">
+        <div class="cards">
+        <div class="client-card">
+            <p>We proudly serve students and professionals from around the world, providing secure and comfortable
+                accommodations.</p>
+        </div>
+        <div class="client-card">
+            <p>Our commitment to quality has made us the preferred choice for countless clients seeking a reliable
+                housing solution.</p>
+        </div>
+    </div>
+        <div class="image-gallery2">
+            <img src="pics/tatalogo.jpg">
+            <img src="pics/infosyslogo.jpeg">
+            <img src="pics/persistentlogo.jpg">
+            <img src="pics/amullogo.png">
+            <img src="pics/wiprologo.jpg">
+        </div>
+    </div>
+    </section>
+
+    <section class="section" id="careers">
+        <h2 style="text-align: center; font-weight: bold;">Careers</h2>
+        <div class="career-card">
+            <h3>Marketing Specialist</h3>
+            <p>Salary: $50,000/year</p>
+            <p>Location: Pune, Maharashtra, India</p>
+            <a href="tel:+919975612580" class="apply-button">Call to Apply</a>
+        </div>
+        <div class="career-card">
+            <h3>Accommodation Manager</h3>
+            <p>Salary: $60,000/year</p>
+            <p>Location: Podgorica, Montenegro</p>
+            <a href="tel:+38267876547" class="apply-button">Call to Apply</a>
+        </div>
+        <div class="career-card">
+            <h3>Customer Support Executive</h3>
+            <p>Salary: $40,000/year</p>
+            <p>Location: Remote</p>
+            <a href="tel:+38277876547" class="apply-button">Call to Apply</a>
+        </div>
+        <div class="career-card">
+            <h3>Graphics Designer</h3>
+            <p>Salary: $30,000/year</p>
+            <p>Location: Remote</p>
+            <a href="tel:+38267876547" class="apply-button">Call to Apply</a>
+        </div>
+    </section>
+
+    <section class="section" id="reviews">
+        <div class="header4">
+        <h2>Reviews from Professionals and Students</h2></div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic1.avif" alt="Professional 1">
+                <p>"The facilities are outstanding, and the staff is very supportive. It truly feels like home!"</p>
+                <strong> – Isabella Rossi, Exchange Student</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic3.avif" alt="Student 1">
+                <p>"I love the vibrant community here. It's the best place for students to live comfortably."</p>
+                <strong>- Jane Smith, College Student</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic2.jpg" alt="Professional 2">
+                <p>"Great environment with top-notch facilities. Perfect for professionals who value convenience."</p>
+                <strong>- Alex Brown, Accommodation Manager</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic4.avif" alt="Professional 2">
+                <p>"HomeLands made my transition to a new city effortless. The staff is friendly, and the accommodation feels safe and secure."</p>
+                <strong>- Sophie Martinez, Graphics Designer</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic5.jpg" alt="Professional 2">
+                <p>"The best part is the location—close to campus, cafes, and public transport. It’s incredibly convenient!"</p>
+                <strong>– Emma Brown, Master’s Student</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic6.avif" alt="Professional 2">
+                <p>"The Wi-Fi is super fast, the environment is peaceful, and it’s perfect for focusing on my studies."</p>
+                <strong>– Mia Robinson, Lawyer</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic17avif.jpg" alt="Professional 2">
+                <p>"What I love most is the vibrant community. There’s always someone to connect with, making it easy to feel at home."</p>
+                <strong>– Lucas Adams, Business Intern</strong>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="review-card">
+                <img src="pics/reviewpic8.avif" alt="Professional 2">
+                <p>"Living here has been an amazing experience. The rooms are spacious, and the support team is always ready to help!"</p>
+                <strong>– Emily Johnson, Graduate Student</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 style="text-align: center; font-weight: bold;">Contact Us</h2>
+        <div class="contact-form">
+            <img src="pics/contactus.jpg" alt="Contact Us">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="phone" placeholder="Your Phone Number" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row footerdata">
+            <div class="col-sm-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.9310211798397!2d73.8291740751898!3d18.441440782636832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2952f3210ec95%3A0x7b232cb6250cf069!2sJSPM%20Narhe%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1737632377500!5m2!1sen!2sin"
+                    width="100%" height="350" style="border:2px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-sm-2">
+                <h5><strong>Quick Link</strong></h5>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Services</a></p>
+                <p><a href="#">Product</a></p>
+                <p><a href="#">Our Team</a></p>
+
+            </div>
+            <div class="col-sm-2">
+                <h5><strong>Social Media</strong></h5>
+                <p><a href="#"><span class="fa fa-facebook-official"></span> Facebook</a></p>
+                <p><a href="#"><span class="fa fa-instagram"></span> Instagram </a></p>
+                <p><a href="#"><span class="fa fa-twitter"></span> Twitter</a></p>
+                <p><a href="#"><span class="fa fa-linkedin"></span> Linkdein</a></p>
+                <p><a href="#"><span class="fa fa-whatsapp"></span> Whatsapp</a></p>
+            </div>
+            <div class="col-sm-2">
+                <h5><strong>Corporate Office</strong></h5>
+                <p>2nd Floor, SK Tower</p>
+                <p>Phase3,</p>
+                <p>Pune, Maharashtra</p>
+                <p>Pin no.511033</p>
+<br>
+                <h5><strong>Registered Office</strong></h5>
+                <p>3rd Floor, Gloria Tower</p>
+                <p>Aundh,</p>
+                <p>Pune, Maharashtra</p>
+                <p>Pin no.411033</p>
+
+                <br>
+                    <p><strong><span class="fa fa-phone"></span> 91+7749399000</strong> </p>
+                    <p><strong><span class="fa fa-phone"></span> 91+7799200322 </strong></p>
+                    <p><strong><span class="fa fa-envelope"></span>Homeland@gmail.com</strong> </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 HomeLands. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
